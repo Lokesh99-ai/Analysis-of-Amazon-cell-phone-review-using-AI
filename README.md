@@ -1,4 +1,4 @@
-# Analysis-of-Amazon-cell-phone-review
+# Analysis-of-Amazon-cell-phone-review using AI
 This system detects whether the review entered is positive or negative.
 
 # Link to the dataset
