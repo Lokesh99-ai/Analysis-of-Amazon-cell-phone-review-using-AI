@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title> Amazon cellphone review analysis </title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index151.css')}}">
+</head>
+<body>
+<form action="/" method="post">
+<div class="row">
+  <div class="column"></div>
+  <div class="column"></div>
+  <div class="column"></div>
+</div> 
+
+<div class="bg-image row">
+ <div class="form-container">
+   <div class="logo"></div>
+   <ul class="list">
+      <li class="Motto"><h3><b><b>Your Review is our PRIORITY!!!</b></b></h3></li>
+      <li><input type="text" name="name" placeholder="Enter Your Name "></li> 
+      <li><textarea id="review1" name="review" class="sc" rows="4" cols="50" placeholder="Enter your review"></textarea></li>
+      <li><button align="center" class="pre" id="btn" name="predict" value="Predict"><h3>Predict<h3></li> 
+      
+	  
+
+   </ul>
+  </div>
+</div> 
+</form> 
+<div class=" upper row">
+    <div class="img-container column">
+	{% if ypred == "POSITIVE REVIEW" %}
+	<img src="{{ im }}" width="466" height="320" alt="User Image">
+    {% endif %}
+    </div>
+	<div class="column {{clna}}" id="ans">
+	   <h1 align="center" class="heading">{{rev}}</h1>
+	   <div class="{{sub}}">
+	      <h2>{{cont}}</h2>
+	   </div>
+	   <br><br><h1 align="center" class="glow"><b>{{ypred}}</b></h1>
+	</div>
+    <div class="img-container column" align="right">
+    {% if ypred == "NEGATIVE REVIEW" %}
+    <img src="{{ im }}" width="450" height="320" alt="User Image">
+    {% endif %}
+	</div>    
+</div>	
+  
+</body>
+</html>      
+
+

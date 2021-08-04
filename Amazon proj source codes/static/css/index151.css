@@ -1,0 +1,243 @@
+*{margin:0;padding:0}
+body{
+  background-image: url('finalb5.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover; 
+  padding-top:20vh;
+}
+.form-container{
+   width:250px;
+   height:auto;
+   padding:40px 30px;
+   background-color: rgba(255,255,255,0.5);
+   border-radius:10px;
+   box-shadow:0 0 10px 0 #000; 
+   margin:auto;
+   position:relative; 
+}
+
+
+.ans-container{
+   width:250px;
+   height:auto;
+   padding:30px 35px;
+   border-radius:10px;
+   margin:auto;
+    border: none;
+    outline: none;
+    position: relative;
+    color:#fff;
+    background: #000;
+    z-index: 0;
+    border-radius: 10px;
+}
+.sub-container{
+  display: flex;
+  flex-wrap: wrap;
+   height: 100px;
+   padding:30px 35px;
+   border-radius:10px;
+   margin:auto;
+    border: none;
+    outline: none;
+    position: relative;
+    color:#fff;
+    background: #000;
+    cursor: pointer;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.logo{
+  background:url('logo.png')no-repeat;
+  width:70px;
+  height:70px;
+  background-size:100%;
+  position:absolute;
+  top:-40px;
+  left:115px;
+}
+ul.list{
+list-style-type:none;
+}
+
+ul.list li{
+   width:250px;
+   margin-bottom:10px;
+}
+.Motto{
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+  text-align:center;
+  font-size: 25px;
+  font-family: "Lucida Console", "Courier New", monospace;
+ }
+
+
+ul.list li textarea,input{
+  width:250px;
+  text-indent:10px;
+  padding:8px 0px;
+  border:none;
+  background-color:#fff;
+  border-radius:5px;
+}
+.heading{
+  font-family: ;
+  color:#cc9900;
+}
+
+.pre{
+    width: 250px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color:#fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.pre:before{
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+ 
+.pre:active{
+    color: #000;
+}
+
+.pre:active:after  {
+    background: transparent;
+}
+
+.pre:hover:before  {
+    opacity: 1;
+}
+
+.pre:after{
+    z-index: -1;
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.upper {
+  margin: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+  padding: 5px; /* this */
+}
+.upper > div {
+  flex: 1 1 auto;
+  margin: 5px;  /* and that, will result in a 10px gap */
+}
+
+.img-container{
+   width:250px;
+   height:auto;
+   border-radius:10px;   
+}
+.glow{
+        font-size: 70px;
+        color: #ffffff;
+        text-align: center;
+        -webkit-animation: glow 1s ease-in-out infinite alternate;
+        -moz-animation: glow 1s ease-in-out infinite alternate;
+        animation: glow 1s ease-in-out infinite alternate;
+      }
+      @-webkit-keyframes glow {
+        from {
+          text-shadow: 0 0 10px #eeeeee, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 
+                       0 0 50px #9554b3, 0 0 60px #9554b3, 0 0 70px #9554b3;
+        }
+        to {
+          text-shadow: 0 0 20px #eeeeee, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6,
+                       0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+        }
+      }
+
+.scrollable-content {
+  background: #000;
+  flex-grow: 1;
+  
+  overflow-y: auto;
+ 
+  /* for Firefox */
+  min-height: 100px;
+}
+
+.scrollable-content::-webkit-scrollbar {
+    width: 16px;
+}
+ 
+.scrollable-content::-webkit-scrollbar-track {
+    background-color: #e4e4e4;
+    border-radius: 100px;
+}
+ 
+.scrollable-content::-webkit-scrollbar-thumb {
+   
+    background-image: linear-gradient(180deg, #d0368a 0%, #708ad4 99%);
+    box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+    border-radius: 100px;
+}
+textarea {
+  resize: none;
+}
+
+.sc::-webkit-scrollbar {
+    width: 16px;
+}
+ 
+.sc::-webkit-scrollbar-track {
+    background-color: #e4e4e4;
+    border-radius: 100px;
+}
+ 
+.sc::-webkit-scrollbar-thumb {
+   
+    background-image: linear-gradient(180deg, #d0368a 0%, #708ad4 99%);
+    box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+    border-radius: 100px;
+}
+
